@@ -1,4 +1,7 @@
 #! /bin/bash
-printf "#!/bin/bash\necho 'Hello'\n" > ~/scripts/$1
+cat > ~/scripts/$1 << 'EOF' 
+#!/bin/bash
+echo 'Hello'
+EOF
 chmod +x ~/scripts/$1
 
